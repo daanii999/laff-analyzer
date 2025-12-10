@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace LAFF\Analyzer\Model;
 
-final class Package extends Box
+class Package extends Box
 {
     public static function rotate(self $box): self
     {

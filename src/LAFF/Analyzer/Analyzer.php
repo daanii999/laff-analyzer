@@ -18,7 +18,7 @@ use LAFF\Analyzer\Model\Container;
 use LAFF\Analyzer\Model\Package;
 use LAFF\Analyzer\Model\PackageEdge;
 
-final class Analyzer
+class Analyzer
 {
     /**
      * @var array<string, Container>

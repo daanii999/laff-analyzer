@@ -15,7 +15,7 @@ namespace LAFF\Analyzer;
 
 use LAFF\Analyzer\Model\Container;
 
-final class WasteCalculator
+class WasteCalculator
 {
     /**
      * @param Container[] $containers

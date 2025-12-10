@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace LAFF\Analyzer\Model;
 
-final class Container extends Box
+class Container extends Box
 {
-    public readonly bool $virtual;
+    public bool $virtual;
     /**
      * @var array<int, array<int, Package>>
      */

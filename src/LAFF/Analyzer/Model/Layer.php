@@ -13,6 +13,6 @@ declare(strict_types=1);
 
 namespace LAFF\Analyzer\Model;
 
-final class Layer extends Box
+class Layer extends Box
 {
 }

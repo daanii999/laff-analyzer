@@ -13,15 +13,15 @@ declare(strict_types=1);
 
 namespace LAFF\Analyzer\Model;
 
-abstract class Box
+class Box
 {
     public const HEIGHT = 'height';
     public const LENGTH = 'length';
     public const WIDTH = 'width';
 
-    public readonly string $identifier;
+    public string $identifier;
 
-    public function __construct(public readonly int $length, public readonly int $width, public readonly int $height, ?string $identifier = null)
+    public function __construct(public int $length, public int $width, public int $height, ?string $identifier = null)
     {
         $this->identifier = $identifier ?: bin2hex(random_bytes(10));
     }

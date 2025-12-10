@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace LAFF\Analyzer\Model;
 
-final class PackageEdge
+class PackageEdge
 {
-    public function __construct(public readonly int $size, public readonly string $name)
+    public function __construct(public int $size, public string $name)
     {
     }
 
