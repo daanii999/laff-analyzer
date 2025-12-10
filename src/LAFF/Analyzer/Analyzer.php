@@ -297,4 +297,33 @@ class Analyzer
 
         return $this->packages[$biggestPackageIndex];
     }
+
+    /**
+     * @return int
+     */
+    public function getWasteVolume(): int
+    {
+        return $this->getContainersVolume() - $this->getPackedVolume();
+    }
+
+    /**
+     * @return int
+     */
+    public function getWastePercentage(): int
+    {
+        $containersVolume = $this->getContainersVolume();
+        $packedVolume = $this->getPackedVolume();
+
+        return $containersVolume > 0 && $packedVolume > 0 ? (int) ((($containersVolume - $packedVolume) / $containersVolume) * 100) : 0;
+    }
+
+    private function getContainersVolume(): int
+    {
+        $volume = 0;
+        foreach ($this->containers as $container) {
+            $volume += $container->getVolume();
+        }
+
+        return $volume;
+    }
 }
